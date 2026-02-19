@@ -60,7 +60,7 @@ def bernoulli_pmf(x, theta):
     """
     f(x, theta) = theta^x (1-theta)^(1-x)
     """
-    return ((theta*x)((1-theta)**(1-x)))
+    return ((theta**x)*((1-theta)**(1-x)))
 
 
 
@@ -88,7 +88,7 @@ def normal_pdf(x, mu, sigma):
     Normal PDF:
         1/(sqrt(2π)σ) * exp(-(x-μ)^2 / (2σ^2))
     """
-    return (1 / (math.sqrt(2 * math.pi) * sigma)) * math.exp(-((x - mu) * 2) / (2 * sigma * 2))
+    return (1 / (math.sqrt(2 * math.pi) * sigma)) * math.exp(-((x - mu) ** 2) / (2 * sigma ** 2))
 
 
 def normal_histogram_analysis(mu_values,
@@ -220,5 +220,5 @@ def uniform_histogram_analysis(a_values, b_values, n_samples=10000, bins=30):
 
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     print("Implement all required functions.")
